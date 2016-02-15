@@ -1,0 +1,21 @@
+fantasy-birds
+=============
+
+> This is a port of the haskell package [Data.Aviary.Birds][haskell-docs].
+Every thing for your combinatory needs.
+
+Check out the [docs](#ornithology) to see all available birds.
+
+[![Build Status](https://travis-ci.org/stoeffel/fantasy-birds.svg)](https://travis-ci.org/stoeffel/fantasy-birds)
+[![npm version](https://badge.fury.io/js/fantasy-birds.svg)](http://badge.fury.io/js/fantasy-birds)
+[![dependecies](https://david-dm.org/stoeffel/fantasy-birds.svg)](https://david-dm.org/stoeffel/fantasy-birds.svg)
+[![codecov.io](https://codecov.io/github/stoeffel/fantasy-birds/coverage.svg?branch=master)](https://codecov.io/github/stoeffel/fantasy-birds?branch=master)
+
+[docs]: ./DOCS.md
+[haskell-docs]: https://hackage.haskell.org/package/data-aviary-0.4.0/docs/Data-Aviary-Birds.html
+[haskell-source]: https://hackage.haskell.org/package/data-aviary-0.4.0/docs/src/Data-Aviary-Birds.html
+
+
+## Ornithology
+
+

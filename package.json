@@ -1,0 +1,44 @@
+{
+  "name": "fantasy-birds",
+  "version": "0.0.1",
+  "description": "",
+  "main": "fantasy-birds.js",
+  "scripts": {
+    "test": "npm run test:unit && npm run test:doc && npm run docs",
+    "test:unit": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly",
+    "test:doc": "node_modules/.bin/doctest --prefix . --nodejs '--harmony' --module commonjs fantasy-birds.js ",
+    "codecov": "npm run test && codecov",
+    "docs": "cp README.md.header README.md && transcribe --url 'https://github.com/stoeffel/fantasy-birds/blob/master/{filename}#L{line}' -- fantasy-birds.js >> README.md",
+    "patch-release": "npm version patch && npm publish && git push --follow-tags",
+    "minor-release": "npm version minor && npm publish && git push --follow-tags",
+    "major-release": "npm version major && npm publish && git push --follow-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stoeffel/fantasy-birds.git"
+  },
+  "keywords": [
+    "fantasyland",
+    "combinators",
+    "birds"
+  ],
+  "files": [
+    "fantasy-birds.js"
+  ],
+  "author": "stoeffel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stoeffel/fantasy-birds/issues"
+  },
+  "homepage": "https://github.com/stoeffel/fantasy-birds#readme",
+  "devDependencies": {
+    "codecov": "^1.0.1",
+    "doctest": "^0.10.0",
+    "istanbul": "^0.4.2",
+    "jsverify": "^0.7.1",
+    "mocha": "^2.4.5",
+    "mocha-lcov-reporter": "^1.0.0",
+    "ramda": "^0.19.1",
+    "transcribe": "^0.3.0"
+  }
+}
