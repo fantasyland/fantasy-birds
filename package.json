@@ -1,6 +1,6 @@
 {
   "name": "fantasy-birds",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "",
   "main": "fantasy-birds.js",
   "scripts": {
@@ -25,7 +25,7 @@
   "files": [
     "fantasy-birds.js"
   ],
-  "author": "stoeffel",
+  "author": "stoeffel <schtoeffel@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/stoeffel/fantasy-birds/issues"
