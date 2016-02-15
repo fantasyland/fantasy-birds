@@ -89,9 +89,23 @@ const blackbird = f => g => x => y => f(g(x)(y))
 const bluebird_ = f => x => g => y => f(x)(g(y))
 
 //# bunting :: (d -> e) -> (a -> b -> c -> d) -> a -> b -> c -> e
+//.
+//. B2 combinator
+//.
+//. ```js
+//. > bunting(x =>  x * -1)(x => y => z => x + y + z)(1)(2)(3)
+//. -6
+//. ```
 const bunting = f => g => x => y => z => f(g(x)(y)(z))
 
 //# cardinal_ :: (c -> a -> d) -> (b -> c) -> a -> b -> d
+//.
+//. C' combinator
+//.
+//. ```js
+//. > cardinal_(x => y => x * y)(x => x + 1)(2)(3)
+//. 8
+//. ```
 const cardinal_ = f => g => x => y => f(g(y))(x)
 
 //# cardinalstar :: (a -> c -> b -> d) -> a -> b -> c -> d

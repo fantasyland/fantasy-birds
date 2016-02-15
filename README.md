@@ -102,80 +102,94 @@ B' combinator
 
 <h3 name="bunting"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L91">bunting :: (d -> e) -> (a -> b -> c -> d) -> a -> b -> c -> e</a></code></h3>
 
-<h3 name="cardinal_"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L94">cardinal_ :: (c -> a -> d) -> (b -> c) -> a -> b -> d</a></code></h3>
+B2 combinator
 
-<h3 name="cardinalstar"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L97">cardinalstar :: (a -> c -> b -> d) -> a -> b -> c -> d</a></code></h3>
+```js
+> bunting(x =>  x * -1)(x => y => z => x + y + z)(1)(2)(3)
+-6
+```
 
-<h3 name="cardinalstarstar"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L100">cardinalstarstar :: (a -> b -> d -> c -> e) -> a -> b -> c -> d -> e</a></code></h3>
+<h3 name="cardinal_"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L101">cardinal_ :: (c -> a -> d) -> (b -> c) -> a -> b -> d</a></code></h3>
 
-<h3 name="dove"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L103">dove :: (a -> c -> d) -> a -> (b -> c) -> b -> d</a></code></h3>
+C' combinator
 
-<h3 name="dickcissel"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L106">dickcissel :: (a -> b -> d -> e) -> a -> b -> (c -> d) -> c -> e</a></code></h3>
+```js
+> cardinal_(x => y => x * y)(x => x + 1)(2)(3)
+8
+```
 
-<h3 name="dovekie"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L109">dovekie :: (c -> d -> e) -> (a -> c) -> a -> (b -> d) -> b -> e</a></code></h3>
+<h3 name="cardinalstar"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L111">cardinalstar :: (a -> c -> b -> d) -> a -> b -> c -> d</a></code></h3>
 
-<h3 name="eagle"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L112">eagle :: (a -> d -> e) -> a -> (b -> c -> d) -> b -> c -> e</a></code></h3>
+<h3 name="cardinalstarstar"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L114">cardinalstarstar :: (a -> b -> d -> c -> e) -> a -> b -> c -> d -> e</a></code></h3>
 
-<h3 name="eaglebald"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L115">eaglebald :: (e -> f -> g) -> (a -> b -> e) -> a -> b -> (c -> d -> f) -> c -> d -> g</a></code></h3>
+<h3 name="dove"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L117">dove :: (a -> c -> d) -> a -> (b -> c) -> b -> d</a></code></h3>
 
-<h3 name="finch"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L118">finch :: a -> b -> (b -> a -> c) -> c</a></code></h3>
+<h3 name="dickcissel"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L120">dickcissel :: (a -> b -> d -> e) -> a -> b -> (c -> d) -> c -> e</a></code></h3>
 
-<h3 name="finchstar"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L121">finchstar :: (c -> b -> a -> d) -> a -> b -> c -> d</a></code></h3>
+<h3 name="dovekie"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L123">dovekie :: (c -> d -> e) -> (a -> c) -> a -> (b -> d) -> b -> e</a></code></h3>
 
-<h3 name="finchstarstar"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L124">finchstarstar :: (a -> d -> c -> b -> e) -> a -> b -> c -> d -> e</a></code></h3>
+<h3 name="eagle"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L126">eagle :: (a -> d -> e) -> a -> (b -> c -> d) -> b -> c -> e</a></code></h3>
 
-<h3 name="goldfinch"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L127">goldfinch :: (b -> c -> d) -> (a -> c) -> a -> b -> d</a></code></h3>
+<h3 name="eaglebald"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L129">eaglebald :: (e -> f -> g) -> (a -> b -> e) -> a -> b -> (c -> d -> f) -> c -> d -> g</a></code></h3>
 
-<h3 name="hummingbird"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L130">hummingbird :: (a -> b -> a -> c) -> a -> b -> c</a></code></h3>
+<h3 name="finch"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L132">finch :: a -> b -> (b -> a -> c) -> c</a></code></h3>
 
-<h3 name="idstar"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L133">idstar :: (a -> b) -> a -> b</a></code></h3>
+<h3 name="finchstar"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L135">finchstar :: (c -> b -> a -> d) -> a -> b -> c -> d</a></code></h3>
 
-<h3 name="idstarstar"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L136">idstarstar :: (a -> b -> c) -> a -> b -> c</a></code></h3>
+<h3 name="finchstarstar"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L138">finchstarstar :: (a -> d -> c -> b -> e) -> a -> b -> c -> d -> e</a></code></h3>
 
-<h3 name="jalt"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L139">jalt :: (a -> c) -> a -> b -> c</a></code></h3>
+<h3 name="goldfinch"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L141">goldfinch :: (b -> c -> d) -> (a -> c) -> a -> b -> d</a></code></h3>
 
-<h3 name="jalt_"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L142">jalt_ :: (a -> b -> d) -> a -> b -> c -> d</a></code></h3>
+<h3 name="hummingbird"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L144">hummingbird :: (a -> b -> a -> c) -> a -> b -> c</a></code></h3>
 
-<h3 name="jay"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L145">jay :: (a -> b -> b) -> a -> b -> a -> b</a></code></h3>
+<h3 name="idstar"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L147">idstar :: (a -> b) -> a -> b</a></code></h3>
 
-<h3 name="kite"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L148">kite :: a -> b -> b</a></code></h3>
+<h3 name="idstarstar"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L150">idstarstar :: (a -> b -> c) -> a -> b -> c</a></code></h3>
 
-<h3 name="owl"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L151">owl :: ((a -> b) -> a) -> (a -> b) -> b</a></code></h3>
+<h3 name="jalt"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L153">jalt :: (a -> c) -> a -> b -> c</a></code></h3>
 
-<h3 name="phoenix"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L154">phoenix :: (b -> c -> d) -> (a -> b) -> (a -> c) -> a -> d</a></code></h3>
+<h3 name="jalt_"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L156">jalt_ :: (a -> b -> d) -> a -> b -> c -> d</a></code></h3>
 
-<h3 name="quacky"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L157">quacky :: a -> (a -> b) -> (b -> c) -> c</a></code></h3>
+<h3 name="jay"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L159">jay :: (a -> b -> b) -> a -> b -> a -> b</a></code></h3>
 
-<h3 name="queer"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L160">queer :: (a -> b) -> (b -> c) -> a -> c</a></code></h3>
+<h3 name="kite"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L162">kite :: a -> b -> b</a></code></h3>
 
-<h3 name="quirky"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L163">quirky :: (a -> b) -> a -> (b -> c) -> c</a></code></h3>
+<h3 name="owl"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L165">owl :: ((a -> b) -> a) -> (a -> b) -> b</a></code></h3>
 
-<h3 name="quixotic"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L166">quixotic :: (b -> c) -> a -> (a -> b) -> c</a></code></h3>
+<h3 name="phoenix"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L168">phoenix :: (b -> c -> d) -> (a -> b) -> (a -> c) -> a -> d</a></code></h3>
 
-<h3 name="quizzical"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L169">quizzical :: a -> (b -> c) -> (a -> b) -> c</a></code></h3>
+<h3 name="quacky"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L171">quacky :: a -> (a -> b) -> (b -> c) -> c</a></code></h3>
 
-<h3 name="robin"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L172">robin :: a -> (b -> a -> c) -> b -> c</a></code></h3>
+<h3 name="queer"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L174">queer :: (a -> b) -> (b -> c) -> a -> c</a></code></h3>
 
-<h3 name="robinstar"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L175">robinstar :: (b -> c -> a -> d) -> a -> b -> c -> d</a></code></h3>
+<h3 name="quirky"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L177">quirky :: (a -> b) -> a -> (b -> c) -> c</a></code></h3>
 
-<h3 name="robinstarstar"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L178">robinstarstar :: (a -> c -> d -> b -> e) -> a -> b -> c -> d -> e</a></code></h3>
+<h3 name="quixotic"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L180">quixotic :: (b -> c) -> a -> (a -> b) -> c</a></code></h3>
 
-<h3 name="starling"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L181">starling :: (a -> b -> c) -> (a -> b) -> a -> c</a></code></h3>
+<h3 name="quizzical"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L183">quizzical :: a -> (b -> c) -> (a -> b) -> c</a></code></h3>
 
-<h3 name="starling_"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L184">starling_ :: (b -> c -> d) -> (a -> b) -> (a -> c) -> a -> d</a></code></h3>
+<h3 name="robin"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L186">robin :: a -> (b -> a -> c) -> b -> c</a></code></h3>
 
-<h3 name="thrush"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L187">thrush :: a -> (a -> b) -> b</a></code></h3>
+<h3 name="robinstar"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L189">robinstar :: (b -> c -> a -> d) -> a -> b -> c -> d</a></code></h3>
 
-<h3 name="vireo"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L190">vireo :: a -> b -> (a -> b -> c) -> c</a></code></h3>
+<h3 name="robinstarstar"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L192">robinstarstar :: (a -> c -> d -> b -> e) -> a -> b -> c -> d -> e</a></code></h3>
 
-<h3 name="vireostar"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L193">vireostar :: (b -> a -> b -> d) -> a -> b -> b -> d</a></code></h3>
+<h3 name="starling"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L195">starling :: (a -> b -> c) -> (a -> b) -> a -> c</a></code></h3>
 
-<h3 name="vireostarstar"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L196">vireostarstar :: (a -> c -> b -> c -> e) -> a -> b -> c -> c -> e</a></code></h3>
+<h3 name="starling_"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L198">starling_ :: (b -> c -> d) -> (a -> b) -> (a -> c) -> a -> d</a></code></h3>
 
-<h3 name="warbler"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L199">warbler :: (a -> a -> b) -> a -> b</a></code></h3>
+<h3 name="thrush"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L201">thrush :: a -> (a -> b) -> b</a></code></h3>
 
-<h3 name="warbler1"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L202">warbler1 :: a -> (a -> a -> b) -> b</a></code></h3>
+<h3 name="vireo"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L204">vireo :: a -> b -> (a -> b -> c) -> c</a></code></h3>
 
-<h3 name="warblerstar"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L205">warblerstar :: (a -> b -> b -> c) -> a -> b -> c</a></code></h3>
+<h3 name="vireostar"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L207">vireostar :: (b -> a -> b -> d) -> a -> b -> b -> d</a></code></h3>
 
-<h3 name="warblerstarstar"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L208">warblerstarstar :: (a -> b -> c -> c -> d) -> a -> b -> c -> d</a></code></h3>
+<h3 name="vireostarstar"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L210">vireostarstar :: (a -> c -> b -> c -> e) -> a -> b -> c -> c -> e</a></code></h3>
+
+<h3 name="warbler"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L213">warbler :: (a -> a -> b) -> a -> b</a></code></h3>
+
+<h3 name="warbler1"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L216">warbler1 :: a -> (a -> a -> b) -> b</a></code></h3>
+
+<h3 name="warblerstar"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L219">warblerstar :: (a -> b -> b -> c) -> a -> b -> c</a></code></h3>
+
+<h3 name="warblerstarstar"><code><a href="https://github.com/stoeffel/fantasy-birds/blob/master/fantasy-birds.js#L222">warblerstarstar :: (a -> b -> c -> c -> d) -> a -> b -> c -> d</a></code></h3>
