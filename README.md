@@ -1,5 +1,9 @@
-fantasy-birds
+Fantasy Birds
 =============
+
+![](https://raw.github.com/puffnfresh/fantasy-land/master/logo.png)
+
+## General
 
 > This is a port of the haskell package [Data.Aviary.Birds][haskell-docs].
 Every thing for your combinatory needs.
