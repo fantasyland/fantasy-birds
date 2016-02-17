@@ -1,4 +1,5 @@
 const combinators = require('fantasy-combinators');
+const curry = require('fantasy-helpers').curry
 
 
 //# cardinal :: (a -> b -> c) -> b -> a -> c
@@ -9,6 +10,6 @@ const combinators = require('fantasy-combinators');
 //. > cardinal(str => prefix => prefix + str)('-')('birds')
 //. '-birds'
 //. ```
-const cardinal = combinators.flip
+const cardinal = curry(combinators.flip)
 
 module.exports = cardinal

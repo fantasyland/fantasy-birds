@@ -1,4 +1,5 @@
 const combinators = require('fantasy-combinators');
+const curry = require('fantasy-helpers').curry
 
 
 //# applicator :: (a -> b) -> a -> b
@@ -9,6 +10,6 @@ const combinators = require('fantasy-combinators');
 //. > applicator(x => x + 1)(3)
 //. 4
 //. ```
-const applicator = combinators.apply
+const applicator = curry(combinators.apply)
 
 module.exports = applicator

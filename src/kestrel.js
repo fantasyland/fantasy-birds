@@ -1,4 +1,5 @@
 const combinators = require('fantasy-combinators');
+const curry = require('fantasy-helpers').curry
 
 
 //# kestrel :: a -> b -> a
@@ -9,6 +10,6 @@ const combinators = require('fantasy-combinators');
 //. > kestrel('bird')('cat')
 //. 'bird'
 //. ```
-const kestrel = combinators.constant
+const kestrel = curry(combinators.constant)
 
 module.exports = kestrel
