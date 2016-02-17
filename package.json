@@ -41,6 +41,7 @@
     "transcribe": "^0.3.0"
   },
   "dependencies": {
-    "fantasy-combinators": "git+https://github.com/fantasyland/fantasy-combinators.git"
+    "fantasy-combinators": "git+https://github.com/fantasyland/fantasy-combinators.git",
+    "fantasy-helpers": "0.0.1"
   }
 }
