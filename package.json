@@ -4,9 +4,8 @@
   "description": "",
   "main": "fantasy-birds.js",
   "scripts": {
-    "test": "npm run test:unit && npm run test:doc && npm run docs",
-    "test:unit": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly --report html",
-    "test:doc": "node_modules/.bin/doctest --prefix . --nodejs '--harmony' --module commonjs fantasy-birds.js ",
+    "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly --report html",
+    "test:doc": "node_modules/.bin/doctest --prefix . --nodejs '--harmony' --module commonjs src/*.js ",
     "codecov": "npm run test && codecov",
     "docs": "cp README.md.header README.md && for f in src/*; do transcribe --url 'https://github.com/fantasyland/fantasy-birds/blob/master/{filename}#L{line}' -- ${f} >> README.md ; done",
     "patch-release": "npm version patch && npm publish && git push --follow-tags",
