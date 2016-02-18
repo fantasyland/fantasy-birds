@@ -9,6 +9,6 @@ const curry = require('fantasy-helpers').curry
 //. > becard(x => x * -1)(x => x * 2)(x => x - 1)(3)
 //. -4
 //. ```
-const becard = curry((f,  g,  h,  x) => f(g(h(x))))
+const becard = curry((f, g, h, x) => f(g(h(x))))
 
 module.exports = becard

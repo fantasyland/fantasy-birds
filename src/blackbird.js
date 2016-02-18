@@ -9,6 +9,6 @@ const curry = require('fantasy-helpers').curry
 //. > blackbird(x => x * -1)(x => y => x + y)(3)(5)
 //. -8
 //. ```
-const blackbird = curry((f,  g,  x,  y) => f(g(x)(y)))
+const blackbird = curry((f, g, x, y) => f(g(x)(y)))
 
 module.exports = blackbird
