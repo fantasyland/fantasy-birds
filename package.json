@@ -7,7 +7,7 @@
     "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly --report html",
     "test:doc": "node_modules/.bin/doctest --prefix . --nodejs '--harmony' --module commonjs src/*.js ",
     "codecov": "npm run test && codecov",
-    "docs": "cp README.md.header README.md && transcribe --url './{filename}#L{line}' -- src/*.js >> README.md",
+    "docs": "npm run test:doc && cp README.md.header README.md && transcribe --url './{filename}#L{line}' -- src/*.js >> README.md",
     "patch-release": "npm version patch && npm publish && git push --follow-tags",
     "minor-release": "npm version minor && npm publish && git push --follow-tags",
     "major-release": "npm version major && npm publish && git push --follow-tags"

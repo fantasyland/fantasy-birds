@@ -96,7 +96,21 @@ C' combinator
 
 <h3 name="cardinalstar"><code><a href="./src/cardinalstar.js#L4">cardinalstar :: (a -> c -> b -> d) -> a -> b -> c -> d</a></code></h3>
 
+C* combinator - cardinal once removed.
+
+```js
+> cardinalstar(str => prefix => postfix => prefix + str + postfix)('birds')('!')('-')
+'-birds!'
+```
+
 <h3 name="cardinalstarstar"><code><a href="./src/cardinalstarstar.js#L4">cardinalstarstar :: (a -> b -> d -> c -> e) -> a -> b -> c -> d -> e</a></code></h3>
+
+C** combinator - cardinal twice removed.
+
+```js
+> cardinalstarstar(a => b => separator => postfix => a + separator + b + postfix)('fantasy')('birds')('!')('-')
+'fantasy-birds!'
+```
 
 <h3 name="dickcissel"><code><a href="./src/dickcissel.js#L4">dickcissel :: (a -> b -> d -> e) -> a -> b -> (c -> d) -> c -> e</a></code></h3>
 
