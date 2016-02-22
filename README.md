@@ -132,6 +132,13 @@ D combinator
 
 <h3 name="dovekie"><code><a href="./src/dovekie.js#L4">dovekie :: (c -> d -> e) -> (a -> c) -> a -> (b -> d) -> b -> e</a></code></h3>
 
+D2 combinator
+
+```js
+> dovekie(prefix => str => prefix + str)(x => x.toUpperCase())('fantasy-')(x => x.toLowerCase())('BIRDS')
+'FANTASY-birds'
+```
+
 <h3 name="eagle"><code><a href="./src/eagle.js#L4">eagle :: (a -> d -> e) -> a -> (b -> c -> d) -> b -> c -> e</a></code></h3>
 
 <h3 name="eaglebald"><code><a href="./src/eaglebald.js#L4">eaglebald :: (e -> f -> g) -> (a -> b -> e) -> a -> b -> (c -> d -> f) -> c -> d -> g</a></code></h3>
