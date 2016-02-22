@@ -114,7 +114,21 @@ C** combinator - cardinal twice removed.
 
 <h3 name="dickcissel"><code><a href="./src/dickcissel.js#L4">dickcissel :: (a -> b -> d -> e) -> a -> b -> (c -> d) -> c -> e</a></code></h3>
 
+D1 combinator
+
+```js
+> dickcissel(prefix => postfix => str => prefix + str + postfix)('-')('!')(x => x.toUpperCase())('birds')
+'-BIRDS!'
+```
+
 <h3 name="dove"><code><a href="./src/dove.js#L4">dove :: (a -> c -> d) -> a -> (b -> c) -> b -> d</a></code></h3>
+
+D combinator
+
+```js
+> dove(postfix => str => str + postfix)('!')(x => x.toUpperCase())('birds')
+'BIRDS!'
+```
 
 <h3 name="dovekie"><code><a href="./src/dovekie.js#L4">dovekie :: (c -> d -> e) -> (a -> c) -> a -> (b -> d) -> b -> e</a></code></h3>
 
