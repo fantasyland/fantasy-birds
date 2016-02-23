@@ -141,6 +141,13 @@ D2 combinator
 
 <h3 name="eagle"><code><a href="./src/eagle.js#L4">eagle :: (a -> d -> e) -> a -> (b -> c -> d) -> b -> c -> e</a></code></h3>
 
+E combinator
+
+```js
+> eagle(prefix => str => prefix + str)('-')(str => postfix => str + postfix)('birds')('!')
+'-birds!'
+```
+
 <h3 name="eaglebald"><code><a href="./src/eaglebald.js#L4">eaglebald :: (e -> f -> g) -> (a -> b -> e) -> a -> b -> (c -> d -> f) -> c -> d -> g</a></code></h3>
 
 <h3 name="finch"><code><a href="./src/finch.js#L4">finch :: a -> b -> (b -> a -> c) -> c</a></code></h3>
