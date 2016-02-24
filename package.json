@@ -8,9 +8,9 @@
     "test:doc": "node_modules/.bin/doctest --prefix . --nodejs '--harmony' --module commonjs src/*.js ",
     "codecov": "npm run test && codecov",
     "docs": "npm run test:doc && cp README.md.header README.md && transcribe --url './{filename}#L{line}' -- src/*.js >> README.md",
-    "patch-release": "npm version patch && npm publish && git push --follow-tags",
-    "minor-release": "npm version minor && npm publish && git push --follow-tags",
-    "major-release": "npm version major && npm publish && git push --follow-tags"
+    "release-major": "xyz --repo git@github.com:fantasyland/fantasy-birds.git --increment major",
+    "release-minor": "xyz --repo git@github.com:fantasyland/fantasy-birds.git --increment minor",
+    "release-patch": "xyz --repo git@github.com:fantasyland/fantasy-birds.git --increment patch"
   },
   "repository": {
     "type": "git",
@@ -38,7 +38,8 @@
     "jsverify": "^0.7.1",
     "mocha": "^2.4.5",
     "mocha-lcov-reporter": "^1.0.0",
-    "transcribe": "^0.3.0"
+    "transcribe": "^0.3.0",
+    "xyz": "^0.5.0"
   },
   "dependencies": {
     "fantasy-combinators": "git+https://github.com/fantasyland/fantasy-combinators.git",
