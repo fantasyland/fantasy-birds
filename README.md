@@ -150,7 +150,21 @@ E combinator
 
 <h3 name="eaglebald"><code><a href="./src/eaglebald.js#L4">eaglebald :: (e -> f -> g) -> (a -> b -> e) -> a -> b -> (c -> d -> f) -> c -> d -> g</a></code></h3>
 
+E^ combinator
+
+```js
+> eaglebald(x => y => y + x)(a => b => b + a)('!')('birds')(a => b => a + b)('fantasy')('-')
+'fantasy-birds!'
+```
+
 <h3 name="finch"><code><a href="./src/finch.js#L4">finch :: a -> b -> (b -> a -> c) -> c</a></code></h3>
+
+F combinator
+
+```js
+> finch(-1, 3)(x => y => x * y)
+-3
+```
 
 <h3 name="finchstar"><code><a href="./src/finchstar.js#L4">finchstar :: (c -> b -> a -> d) -> a -> b -> c -> d</a></code></h3>
 
