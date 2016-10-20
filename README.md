@@ -168,7 +168,21 @@ F combinator
 
 <h3 name="finchstar"><code><a href="./src/finchstar.js#L4">finchstar :: (c -> b -> a -> d) -> a -> b -> c -> d</a></code></h3>
 
+F* combinator - finch once removed
+
+```js
+> finchstar(a => separator => b => a + separator + b)('birds')('-')('fantasy')
+'fantasy-birds'
+```
+
 <h3 name="finchstarstar"><code><a href="./src/finchstarstar.js#L4">finchstarstar :: (a -> d -> c -> b -> e) -> a -> b -> c -> d -> e</a></code></h3>
+
+F** combinator - finch twice removed.
+
+```js
+> finchstarstar(a => postfix => b => separator => a + separator + b + postfix)('fantasy')('-')('birds')("!")
+'fantasy-birds!'
+```
 
 <h3 name="goldfinch"><code><a href="./src/goldfinch.js#L4">goldfinch :: (b -> c -> d) -> (a -> c) -> a -> b -> d</a></code></h3>
 
