@@ -195,6 +195,13 @@ G combinator - goldfinch.
 
 <h3 name="hummingbird"><code><a href="./src/hummingbird.js#L4">hummingbird :: (a -> b -> a -> c) -> a -> b -> c</a></code></h3>
 
+H combinator - hummingbird.
+
+```js
+> hummingbird(prefix => a => postfix => prefix + a + postfix)('!')('birds')
+'!birds!'
+```
+
 <h3 name="idiot"><code><a href="./src/idiot.js#L5">idiot :: a -> a</a></code></h3>
 
 identity
