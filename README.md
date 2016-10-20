@@ -186,6 +186,13 @@ F** combinator - finch twice removed.
 
 <h3 name="goldfinch"><code><a href="./src/goldfinch.js#L4">goldfinch :: (b -> c -> d) -> (a -> c) -> a -> b -> d</a></code></h3>
 
+G combinator - goldfinch.
+
+```js
+> goldfinch(b => c => b + c)(a => a * 2)(3)(4)
+10
+```
+
 <h3 name="hummingbird"><code><a href="./src/hummingbird.js#L4">hummingbird :: (a -> b -> a -> c) -> a -> b -> c</a></code></h3>
 
 <h3 name="idiot"><code><a href="./src/idiot.js#L5">idiot :: a -> a</a></code></h3>
