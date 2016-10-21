@@ -231,7 +231,21 @@ I** combinator - identity bird twice removed
 
 <h3 name="jalt"><code><a href="./src/jalt.js#L4">jalt :: (a -> c) -> a -> b -> c</a></code></h3>
 
+Alternative J combinator
+
+```js
+> jalt(a => a + 2)(1)(2)
+3
+```
+
 <h3 name="jalt_"><code><a href="./src/jalt_.js#L4">jalt_ :: (a -> b -> d) -> a -> b -> c -> d</a></code></h3>
+
+J' combinator
+
+```js
+> jalt_(a => b => a * b)(1)(2)(3)
+2
+```
 
 <h3 name="jay"><code><a href="./src/jay.js#L4">jay :: (a -> b -> b) -> a -> b -> a -> b</a></code></h3>
 
