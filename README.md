@@ -213,7 +213,7 @@ identity
 
 <h3 name="idstar"><code><a href="./src/idstar.js#L4">idstar :: (a -> b) -> a -> b</a></code></h3>
 
- I* combinator - identity bird once removed - Alias of [applicator](#applicator--a---b---a---b)
+ I* combinator - identity bird once removed - [`applicator`](#applicator--a---b---a---b)
 
 ```js
 > idstar(x => x + 1)(3)
