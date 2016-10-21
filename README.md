@@ -260,6 +260,13 @@ K combinator or `const`
 
 <h3 name="kite"><code><a href="./src/kite.js#L4">kite :: a -> b -> b</a></code></h3>
 
+Ki - kite. Corresponds to the encoding of `false` in the lambda calculus.
+
+```js
+> kite(1)(3)
+3
+```
+
 <h3 name="owl"><code><a href="./src/owl.js#L4">owl :: ((a -> b) -> a) -> (a -> b) -> b</a></code></h3>
 
 <h3 name="phoenix"><code><a href="./src/phoenix.js#L4">phoenix :: (b -> c -> d) -> (a -> b) -> (a -> c) -> a -> d</a></code></h3>
