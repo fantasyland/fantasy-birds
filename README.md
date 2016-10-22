@@ -332,6 +332,13 @@ Q1 combinator - quixotic bird.
 
 <h3 name="quizzical"><code><a href="./src/quizzical.js#L4">quizzical :: a -> (b -> c) -> (a -> b) -> c</a></code></h3>
 
+Q2 combinator - quizzical bird.
+
+```js
+> quizzical(7)(b => b * 2)(a => a + 2)
+18
+```
+
 <h3 name="robin"><code><a href="./src/robin.js#L4">robin :: a -> (b -> a -> c) -> b -> c</a></code></h3>
 
 <h3 name="robinstar"><code><a href="./src/robinstar.js#L4">robinstar :: (b -> c -> a -> d) -> a -> b -> c -> d</a></code></h3>
