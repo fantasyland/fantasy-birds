@@ -278,6 +278,13 @@ O combinator - owl.
 
 <h3 name="phoenix"><code><a href="./src/phoenix.js#L4">phoenix :: (b -> c -> d) -> (a -> b) -> (a -> c) -> a -> d</a></code></h3>
 
+(Big) Phi combinator - phoenix - [`starling_`](#starling_--b---c---d---a---b---a---c---a---d)
+
+```js
+> phoenix(b => c => b - c)(a => a + 1)(a => a - 1)(5)
+2
+```
+
 <h3 name="psi"><code><a href="./src/psi.js#L5">psi :: (b -> b -> c) -> (a -> b) -> a -> a -> c</a></code></h3>
 
 PSI combinator or on
