@@ -341,6 +341,13 @@ Q2 combinator - quizzical bird.
 
 <h3 name="robin"><code><a href="./src/robin.js#L4">robin :: a -> (b -> a -> c) -> b -> c</a></code></h3>
 
+R combinator - robin.
+
+```js
+> robin("fantasy")(b => a => a + "-" + b)("birds")
+'fantasy-birds'
+```
+
 <h3 name="robinstar"><code><a href="./src/robinstar.js#L4">robinstar :: (b -> c -> a -> d) -> a -> b -> c -> d</a></code></h3>
 
 <h3 name="robinstarstar"><code><a href="./src/robinstarstar.js#L4">robinstarstar :: (a -> c -> d -> b -> e) -> a -> b -> c -> d -> e</a></code></h3>
