@@ -314,6 +314,13 @@ Q combinator - queer bird.
 
 <h3 name="quirky"><code><a href="./src/quirky.js#L4">quirky :: (a -> b) -> a -> (b -> c) -> c</a></code></h3>
 
+Q3 combinator - quirky bird.
+
+```js
+> quirky(a => a + 2)(7)(b => b * 2)
+18
+```
+
 <h3 name="quixotic"><code><a href="./src/quixotic.js#L4">quixotic :: (b -> c) -> a -> (a -> b) -> c</a></code></h3>
 
 <h3 name="quizzical"><code><a href="./src/quizzical.js#L4">quizzical :: a -> (b -> c) -> (a -> b) -> c</a></code></h3>
