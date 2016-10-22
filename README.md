@@ -296,6 +296,13 @@ PSI combinator or on
 
 <h3 name="quacky"><code><a href="./src/quacky.js#L4">quacky :: a -> (a -> b) -> (b -> c) -> c</a></code></h3>
 
+Q4 combinator - quacky bird.
+
+```js
+> quacky(4)(a => a + 2)(b => b / 2)
+3
+```
+
 <h3 name="queer"><code><a href="./src/queer.js#L4">queer :: (a -> b) -> (b -> c) -> a -> c</a></code></h3>
 
 <h3 name="quirky"><code><a href="./src/quirky.js#L4">quirky :: (a -> b) -> a -> (b -> c) -> c</a></code></h3>
