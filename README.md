@@ -350,7 +350,21 @@ R combinator - robin.
 
 <h3 name="robinstar"><code><a href="./src/robinstar.js#L4">robinstar :: (b -> c -> a -> d) -> a -> b -> c -> d</a></code></h3>
 
+R* combinator - robin once removed.
+
+```js
+> robinstar( b => c => a => a + b + c )("fantasy")("-")("birds")
+'fantasy-birds'
+```
+
 <h3 name="robinstarstar"><code><a href="./src/robinstarstar.js#L4">robinstarstar :: (a -> c -> d -> b -> e) -> a -> b -> c -> d -> e</a></code></h3>
+
+R** combinator - robin twice removed.
+
+```js
+> robinstarstar(a => c => d => b => a + b + c + d)("fantasy")("-")("birds")("!")
+'fantasy-birds!'
+```
 
 <h3 name="starling"><code><a href="./src/starling.js#L5">starling :: (a -> b -> c) -> (a -> b) -> a -> c</a></code></h3>
 
