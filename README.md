@@ -168,11 +168,39 @@ F combinator
 
 <h3 name="finchstar"><code><a href="./src/finchstar.js#L4">finchstar :: (c -> b -> a -> d) -> a -> b -> c -> d</a></code></h3>
 
+F* combinator - finch once removed
+
+```js
+> finchstar(a => separator => b => a + separator + b)('birds')('-')('fantasy')
+'fantasy-birds'
+```
+
 <h3 name="finchstarstar"><code><a href="./src/finchstarstar.js#L4">finchstarstar :: (a -> d -> c -> b -> e) -> a -> b -> c -> d -> e</a></code></h3>
+
+F** combinator - finch twice removed.
+
+```js
+> finchstarstar(a => postfix => b => separator => a + separator + b + postfix)('fantasy')('-')('birds')("!")
+'fantasy-birds!'
+```
 
 <h3 name="goldfinch"><code><a href="./src/goldfinch.js#L4">goldfinch :: (b -> c -> d) -> (a -> c) -> a -> b -> d</a></code></h3>
 
+G combinator - goldfinch.
+
+```js
+> goldfinch(b => c => b + c)(a => a * 2)(3)(4)
+10
+```
+
 <h3 name="hummingbird"><code><a href="./src/hummingbird.js#L4">hummingbird :: (a -> b -> a -> c) -> a -> b -> c</a></code></h3>
+
+H combinator - hummingbird.
+
+```js
+> hummingbird(prefix => a => postfix => prefix + a + postfix)('!')('birds')
+'!birds!'
+```
 
 <h3 name="idiot"><code><a href="./src/idiot.js#L5">idiot :: a -> a</a></code></h3>
 
@@ -185,11 +213,39 @@ identity
 
 <h3 name="idstar"><code><a href="./src/idstar.js#L4">idstar :: (a -> b) -> a -> b</a></code></h3>
 
+ I* combinator - identity bird once removed - [`applicator`](#applicator--a---b---a---b)
+
+```js
+> idstar(x => x + 1)(3)
+4
+```
+
 <h3 name="idstarstar"><code><a href="./src/idstarstar.js#L4">idstarstar :: (a -> b -> c) -> a -> b -> c</a></code></h3>
+
+I** combinator - identity bird twice removed
+
+```js
+> idstarstar(a => b => a + b)(1)(2)
+3
+```
 
 <h3 name="jalt"><code><a href="./src/jalt.js#L4">jalt :: (a -> c) -> a -> b -> c</a></code></h3>
 
+Alternative J combinator
+
+```js
+> jalt(a => a + 2)(1)(2)
+3
+```
+
 <h3 name="jalt_"><code><a href="./src/jalt_.js#L4">jalt_ :: (a -> b -> d) -> a -> b -> c -> d</a></code></h3>
+
+J' combinator
+
+```js
+> jalt_(a => b => a * b)(1)(2)(3)
+2
+```
 
 <h3 name="jay"><code><a href="./src/jay.js#L4">jay :: (a -> b -> b) -> a -> b -> a -> b</a></code></h3>
 
@@ -204,9 +260,30 @@ K combinator or `const`
 
 <h3 name="kite"><code><a href="./src/kite.js#L4">kite :: a -> b -> b</a></code></h3>
 
+Ki - kite. Corresponds to the encoding of `false` in the lambda calculus.
+
+```js
+> kite(1)(3)
+3
+```
+
 <h3 name="owl"><code><a href="./src/owl.js#L4">owl :: ((a -> b) -> a) -> (a -> b) -> b</a></code></h3>
 
+O combinator - owl.
+
+```js
+> owl(x => x(3))(y => y + 2)
+7
+```
+
 <h3 name="phoenix"><code><a href="./src/phoenix.js#L4">phoenix :: (b -> c -> d) -> (a -> b) -> (a -> c) -> a -> d</a></code></h3>
+
+(Big) Phi combinator - phoenix - [`starling_`](#starling_--b---c---d---a---b---a---c---a---d)
+
+```js
+> phoenix(b => c => b - c)(a => a + 1)(a => a - 1)(5)
+2
+```
 
 <h3 name="psi"><code><a href="./src/psi.js#L5">psi :: (b -> b -> c) -> (a -> b) -> a -> a -> c</a></code></h3>
 
@@ -219,19 +296,75 @@ PSI combinator or on
 
 <h3 name="quacky"><code><a href="./src/quacky.js#L4">quacky :: a -> (a -> b) -> (b -> c) -> c</a></code></h3>
 
+Q4 combinator - quacky bird.
+
+```js
+> quacky(4)(a => a + 2)(b => b / 2)
+3
+```
+
 <h3 name="queer"><code><a href="./src/queer.js#L4">queer :: (a -> b) -> (b -> c) -> a -> c</a></code></h3>
+
+Q combinator - queer bird.
+
+```js
+> queer(a => a + 2)(b => b * 2)(7)
+18
+```
 
 <h3 name="quirky"><code><a href="./src/quirky.js#L4">quirky :: (a -> b) -> a -> (b -> c) -> c</a></code></h3>
 
+Q3 combinator - quirky bird.
+
+```js
+> quirky(a => a + 2)(7)(b => b * 2)
+18
+```
+
 <h3 name="quixotic"><code><a href="./src/quixotic.js#L4">quixotic :: (b -> c) -> a -> (a -> b) -> c</a></code></h3>
+
+Q1 combinator - quixotic bird.
+
+```js
+> quixotic(b => b * 2)(7)(a => a + 2)
+18
+```
 
 <h3 name="quizzical"><code><a href="./src/quizzical.js#L4">quizzical :: a -> (b -> c) -> (a -> b) -> c</a></code></h3>
 
+Q2 combinator - quizzical bird.
+
+```js
+> quizzical(7)(b => b * 2)(a => a + 2)
+18
+```
+
 <h3 name="robin"><code><a href="./src/robin.js#L4">robin :: a -> (b -> a -> c) -> b -> c</a></code></h3>
+
+R combinator - robin.
+
+```js
+> robin("fantasy")(b => a => a + "-" + b)("birds")
+'fantasy-birds'
+```
 
 <h3 name="robinstar"><code><a href="./src/robinstar.js#L4">robinstar :: (b -> c -> a -> d) -> a -> b -> c -> d</a></code></h3>
 
+R* combinator - robin once removed.
+
+```js
+> robinstar( b => c => a => a + b + c )("fantasy")("-")("birds")
+'fantasy-birds'
+```
+
 <h3 name="robinstarstar"><code><a href="./src/robinstarstar.js#L4">robinstarstar :: (a -> c -> d -> b -> e) -> a -> b -> c -> d -> e</a></code></h3>
+
+R** combinator - robin twice removed.
+
+```js
+> robinstarstar(a => c => d => b => a + b + c + d)("fantasy")("-")("birds")("!")
+'fantasy-birds!'
+```
 
 <h3 name="starling"><code><a href="./src/starling.js#L5">starling :: (a -> b -> c) -> (a -> b) -> a -> c</a></code></h3>
 
